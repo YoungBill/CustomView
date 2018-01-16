@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.baina.customview.MainActivity">
+
+    <com.baina.customview.OmnipotentProgressView
+        android:id="@+id/left_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:layout_marginTop="50dp"
+        app:bg_drawable="@mipmap/btn_photo_select_init"
+        app:max_progress="100"
+        app:orientation="left"
+        app:progress_drawable="@mipmap/btn_photo_select_max" />
+
+    <com.baina.customview.OmnipotentProgressView
+        android:id="@+id/right_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/left_progress"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:layout_marginTop="50dp"
+        app:bg_drawable="@mipmap/btn_photo_select_init"
+        app:max_progress="100"
+        app:orientation="top"
+        app:progress_drawable="@mipmap/btn_photo_select_max" />
+
+    <com.baina.customview.OmnipotentProgressView
+        android:id="@+id/bottom_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/right_progress"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:layout_marginTop="50dp"
+        app:bg_drawable="@mipmap/btn_photo_select_init"
+        app:max_progress="100"
+        app:orientation="right"
+        app:progress_drawable="@mipmap/btn_photo_select_max" />
+
+    <com.baina.customview.OmnipotentProgressView
+        android:id="@+id/top_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bottom_progress"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:layout_marginTop="50dp"
+        app:bg_drawable="@mipmap/btn_photo_select_init"
+        app:max_progress="100"
+        app:orientation="bottom"
+        app:progress_drawable="@mipmap/btn_photo_select_max" />
+
+
+</RelativeLayout>
