@@ -31,15 +31,15 @@ public class OmnipotentProgressView extends View {
 
     public OmnipotentProgressView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.MyProgress);
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.OmnipotentProgress);
         //背景图片
-        mBgResId = typedArray.getResourceId(R.styleable.MyProgress_bg_drawable, 0);
+        mBgResId = typedArray.getResourceId(R.styleable.OmnipotentProgress_bg_drawable, 0);
         //进度图片
-        mProgressResId = typedArray.getResourceId(R.styleable.MyProgress_progress_drawable, 0);
+        mProgressResId = typedArray.getResourceId(R.styleable.OmnipotentProgress_progress_drawable, 0);
         //方向
-        mOrientation = typedArray.getInteger(R.styleable.MyProgress_orientation, 0);
+        mOrientation = typedArray.getInteger(R.styleable.OmnipotentProgress_orientation, 0);
         //最大进度
-        mMaxProgress = typedArray.getInteger(R.styleable.MyProgress_max_progress, 100);
+        mMaxProgress = typedArray.getInteger(R.styleable.OmnipotentProgress_max_progress, 100);
         typedArray.recycle();
         init();
     }

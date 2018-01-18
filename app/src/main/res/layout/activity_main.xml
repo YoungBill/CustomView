@@ -58,4 +58,11 @@
         app:progress_drawable="@mipmap/btn_photo_select_max" />
 
 
+    <com.baina.customview.CircleProgressView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_progress"
+        android:layout_centerHorizontal="true"
+        app:border_color="#ff0000"
+        app:border_width="10" />
 </RelativeLayout>

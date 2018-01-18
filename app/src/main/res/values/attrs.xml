@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="MyProgress">
+
+    <!--万能进度条-->
+    <declare-styleable name="OmnipotentProgress">
         <attr name="bg_drawable" format="reference" />
         <attr name="progress_drawable" format="reference" />
         <attr name="max_progress" format="integer" />
@@ -10,5 +12,13 @@
             <enum name="right" value="2" />
             <enum name="bottom" value="3" />
         </attr>
+    </declare-styleable>
+
+    <!--圆形进度条-->
+    <declare-styleable name="CircleProgress">
+        <attr name="border_width" format="integer" />
+        <attr name="border_color" format="color" />
+        <attr name="sweep_color" format="color" />
+        <attr name="mask_color" format="color" />
     </declare-styleable>
 </resources>
