@@ -59,10 +59,21 @@
 
 
     <com.baina.customview.CircleProgressView
+        android:id="@+id/circleProgressView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/top_progress"
         android:layout_centerHorizontal="true"
         app:border_color="#ff0000"
         app:border_width="10" />
+
+    <Button
+        android:id="@+id/testCoordinateBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="OnClick"
+        android:layout_below="@id/circleProgressView"
+        android:layout_centerHorizontal="true"
+        android:text="testCoordinate"
+        android:textAllCaps="false" />
 </RelativeLayout>

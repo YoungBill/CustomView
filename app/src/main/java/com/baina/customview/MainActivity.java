@@ -1,10 +1,12 @@
 package com.baina.customview;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
+import android.view.View;
 
 public class MainActivity extends Activity {
 
@@ -49,5 +51,13 @@ public class MainActivity extends Activity {
                 }
             }
         }.start();
+    }
+
+    public void OnClick(View view) {
+        switch (view.getId()) {
+            case R.id.testCoordinateBt:
+                startActivity(new Intent(MainActivity.this, CoordinateActivity.class));
+                break;
+        }
     }
 }
