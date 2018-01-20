@@ -6,10 +6,11 @@
     android:layout_height="match_parent">
 
     <Button
+        android:id="@+id/testBt"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:onClick="OnClick"
         android:layout_centerInParent="true"
         android:background="#ff0000" />
-
 
 </RelativeLayout>
