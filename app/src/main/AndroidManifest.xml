@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".CoordinateActivity" />
+        <activity android:name=".InflaterActivity" />
     </application>
 
 </manifest>

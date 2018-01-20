@@ -58,6 +58,9 @@ public class MainActivity extends Activity {
             case R.id.testCoordinateBt:
                 startActivity(new Intent(MainActivity.this, CoordinateActivity.class));
                 break;
+            case R.id.testInflaterBt:
+                startActivity(new Intent(MainActivity.this, InflaterActivity.class));
+                break;
         }
     }
 }

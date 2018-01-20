@@ -71,9 +71,19 @@
         android:id="@+id/testCoordinateBt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="OnClick"
         android:layout_below="@id/circleProgressView"
         android:layout_centerHorizontal="true"
+        android:onClick="OnClick"
         android:text="testCoordinate"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/testInflaterBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/testCoordinateBt"
+        android:layout_centerHorizontal="true"
+        android:onClick="OnClick"
+        android:text="testInflater"
         android:textAllCaps="false" />
 </RelativeLayout>
