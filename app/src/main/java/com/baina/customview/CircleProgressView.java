@@ -76,7 +76,7 @@ public class CircleProgressView extends View {
         mPaint.setColor(mBorderColor);
         mPaint.setStrokeWidth(mBorderWidth);
         mPaint.setStyle(Paint.Style.STROKE);//设置圆形为空心的圆
-        //这里我们得到控件的Height和Width，根据Heigh和Width来确定圆心的位置，来绘制外层圆
+        //这里我们得到控件的Height和Width，根据Height和Width来确定圆心的位置，来绘制外层圆
         canvas.drawCircle(getWidth() / 2, getWidth() / 2, getWidth() / 2 - mBorderWidth / 2, mPaint);
         //绘制内圆
         mPaint.setColor(mMaskColor);
