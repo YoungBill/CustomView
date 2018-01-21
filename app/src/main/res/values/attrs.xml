@@ -21,5 +21,6 @@
         <attr name="sweep_color" format="color" />
         <attr name="mask_color" format="color" />
         <attr name="max_progress_circle" format="integer" />
+        <attr name="start_angle" format="integer" />
     </declare-styleable>
 </resources>

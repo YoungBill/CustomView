@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Paint;
-import android.graphics.Rect;
 import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
@@ -24,7 +23,8 @@ public class CircleProgressView extends View {
     private int mSweepColor;
     private int mMaskColor;
     private int mMaxProgress;
-    private int mProgress;
+    private int mStartAngle;
+    private int mSweepAngle;
 
     private Paint mPaint = new Paint();
     private RectF mOval = new RectF();
@@ -42,6 +42,8 @@ public class CircleProgressView extends View {
         mMaskColor = typedArray.getInteger(R.styleable.CircleProgress_mask_color, 0);
         //最大进度
         mMaxProgress = typedArray.getInteger(R.styleable.CircleProgress_max_progress_circle, 100);
+        //圆弧开始角度
+        mStartAngle = typedArray.getInteger(R.styleable.CircleProgress_start_angle, 0);
         typedArray.recycle();
     }
 
@@ -89,13 +91,13 @@ public class CircleProgressView extends View {
         mOval.top = mBorderWidth;                                   //上边
         mOval.right = getWidth() - mBorderWidth;                             //右边
         mOval.bottom = getHeight() - mBorderWidth;
-        canvas.drawArc(mOval, -90, mProgress * 360 / mMaxProgress, true, mPaint);
+        canvas.drawArc(mOval, mStartAngle, mSweepAngle, true, mPaint);
         //绘制圆弧
         invalidate();//请求重新绘制view
     }
 
     public void setProgress(int progress) {
-        mProgress = progress;
+        mSweepAngle = progress * 360 / mMaxProgress;
         invalidate();
     }
 }
