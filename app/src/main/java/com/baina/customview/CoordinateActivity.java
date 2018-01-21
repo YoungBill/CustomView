@@ -39,7 +39,7 @@ public class CoordinateActivity extends Activity {
         switch (view.getId()) {
             case R.id.testBt:
                 /**
-                 * View并未发生移动的时候，即translationX或者translation!=0的时候
+                 * View发生移动的时候，即translationX或者translation!=0的时候
                  * getX()=getLeft()+getTranslationX()
                  */
                 ObjectAnimator translationXAnimator1 = ObjectAnimator.ofFloat(testBt, "translationX", 0, 100).setDuration(2000);
