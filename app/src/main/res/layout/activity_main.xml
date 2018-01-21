@@ -14,7 +14,7 @@
         android:layout_margin="10dp"
         android:layout_marginTop="50dp"
         app:bg_drawable="@mipmap/btn_photo_select_init"
-        app:max_progress="100"
+        app:max_progress_omnipotent="100"
         app:orientation="left"
         app:progress_drawable="@mipmap/btn_photo_select_max" />
 
@@ -27,7 +27,7 @@
         android:layout_margin="10dp"
         android:layout_marginTop="50dp"
         app:bg_drawable="@mipmap/btn_photo_select_init"
-        app:max_progress="100"
+        app:max_progress_omnipotent="100"
         app:orientation="top"
         app:progress_drawable="@mipmap/btn_photo_select_max" />
 
@@ -40,7 +40,7 @@
         android:layout_margin="10dp"
         android:layout_marginTop="50dp"
         app:bg_drawable="@mipmap/btn_photo_select_init"
-        app:max_progress="100"
+        app:max_progress_omnipotent="100"
         app:orientation="right"
         app:progress_drawable="@mipmap/btn_photo_select_max" />
 
@@ -53,7 +53,7 @@
         android:layout_margin="10dp"
         android:layout_marginTop="50dp"
         app:bg_drawable="@mipmap/btn_photo_select_init"
-        app:max_progress="100"
+        app:max_progress_omnipotent="100"
         app:orientation="bottom"
         app:progress_drawable="@mipmap/btn_photo_select_max" />
 
@@ -65,7 +65,9 @@
         android:layout_below="@id/top_progress"
         android:layout_centerHorizontal="true"
         app:border_color="#ff0000"
-        app:border_width="10" />
+        app:border_width="10"
+        app:mask_color="#0000ff"
+        app:sweep_color="#00ff00" />
 
     <Button
         android:id="@+id/testCoordinateBt"

@@ -39,7 +39,7 @@ public class OmnipotentProgressView extends View {
         //方向
         mOrientation = typedArray.getInteger(R.styleable.OmnipotentProgress_orientation, 0);
         //最大进度
-        mMaxProgress = typedArray.getInteger(R.styleable.OmnipotentProgress_max_progress, 100);
+        mMaxProgress = typedArray.getInteger(R.styleable.OmnipotentProgress_max_progress_omnipotent, 100);
         typedArray.recycle();
         init();
     }

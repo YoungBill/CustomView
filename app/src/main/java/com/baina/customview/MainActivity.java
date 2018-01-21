@@ -14,6 +14,7 @@ public class MainActivity extends Activity {
     private OmnipotentProgressView mProgressTop;
     private OmnipotentProgressView mProgressRight;
     private OmnipotentProgressView mProgressBottom;
+    private CircleProgressView mCircleProgressView;
 
     private Handler mHandler = new Handler(Looper.getMainLooper()) {
         @Override
@@ -23,6 +24,7 @@ public class MainActivity extends Activity {
             mProgressTop.setProgress(msg.what);
             mProgressRight.setProgress(msg.what);
             mProgressBottom.setProgress(msg.what);
+            mCircleProgressView.setProgress(msg.what);
         }
     };
 
@@ -31,10 +33,11 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mProgressLeft = (OmnipotentProgressView) findViewById(R.id.left_progress);
-        mProgressTop = (OmnipotentProgressView) findViewById(R.id.top_progress);
-        mProgressRight = (OmnipotentProgressView) findViewById(R.id.right_progress);
-        mProgressBottom = (OmnipotentProgressView) findViewById(R.id.bottom_progress);
+        mProgressLeft = findViewById(R.id.left_progress);
+        mProgressTop = findViewById(R.id.top_progress);
+        mProgressRight = findViewById(R.id.right_progress);
+        mProgressBottom = findViewById(R.id.bottom_progress);
+        mCircleProgressView = findViewById(R.id.circleProgressView);
         new Thread() {
             @Override
             public void run() {

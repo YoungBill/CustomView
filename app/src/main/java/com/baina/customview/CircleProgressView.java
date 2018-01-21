@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.graphics.Rect;
+import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -21,6 +23,11 @@ public class CircleProgressView extends View {
     private int mBorderWidth;
     private int mSweepColor;
     private int mMaskColor;
+    private int mMaxProgress;
+    private int mProgress;
+
+    private Paint mPaint = new Paint();
+    private RectF mOval = new RectF();
 
     public CircleProgressView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
@@ -32,7 +39,9 @@ public class CircleProgressView extends View {
         //进度色
         mSweepColor = typedArray.getInteger(R.styleable.CircleProgress_sweep_color, 0);
         //填充色
-        mMaskColor = typedArray.getInteger(R.styleable.CircleProgress_mask_color, 100);
+        mMaskColor = typedArray.getInteger(R.styleable.CircleProgress_mask_color, 0);
+        //最大进度
+        mMaxProgress = typedArray.getInteger(R.styleable.CircleProgress_max_progress_circle, 100);
         typedArray.recycle();
     }
 
@@ -61,17 +70,32 @@ public class CircleProgressView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        Paint mPaint = new Paint();
         //设置抗锯齿
         mPaint.setAntiAlias(true);
-        // 绘制外层的圆框
+        //绘制外层的圆框
         mPaint.setColor(mBorderColor);
         mPaint.setStrokeWidth(mBorderWidth);
         mPaint.setStyle(Paint.Style.STROKE);//设置圆形为空心的圆
-        // 这里我们得到控件的Height和Width，根据Heigh和Width来确定圆心的位置，来绘制外层圆
+        //这里我们得到控件的Height和Width，根据Heigh和Width来确定圆心的位置，来绘制外层圆
         canvas.drawCircle(getWidth() / 2, getWidth() / 2, getWidth() / 2 - mBorderWidth / 2, mPaint);
+        //绘制内圆
+        mPaint.setColor(mMaskColor);
+        mPaint.setStyle(Paint.Style.FILL);
+        canvas.drawCircle(getWidth() / 2, getWidth() / 2, getWidth() / 2 - mBorderWidth, mPaint);
+        //绘制圆弧
+        mPaint.setColor(mSweepColor);
+        mPaint.setStyle(Paint.Style.FILL);
+        mOval.left = mBorderWidth;                              //左边
+        mOval.top = mBorderWidth;                                   //上边
+        mOval.right = getWidth() - mBorderWidth;                             //右边
+        mOval.bottom = getHeight() - mBorderWidth;
+        canvas.drawArc(mOval, -90, mProgress * 360 / mMaxProgress, true, mPaint);
+        //绘制圆弧
         invalidate();//请求重新绘制view
-//        // 绘制内部的扇形
-//        mPaint.setStyle(Paint.Style.FILL_AND_STROKE);
+    }
+
+    public void setProgress(int progress) {
+        mProgress = progress;
+        invalidate();
     }
 }
