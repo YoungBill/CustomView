@@ -16,8 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".OmnipotentProgressViewActivity" />
+        <activity android:name=".CircleProgressViewActivity" />
         <activity android:name=".CoordinateActivity" />
         <activity android:name=".InflaterActivity" />
+        <activity android:name=".PieChartActivity" />
     </application>
 
 </manifest>
