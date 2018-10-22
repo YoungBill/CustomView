@@ -1,4 +1,4 @@
-package com.baina.customview;
+package com.baina.customview.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -8,6 +8,8 @@ import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
+
+import com.baina.customview.R;
 
 /**
  * Created by chentao on 2018/1/18.

@@ -6,6 +6,8 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 
+import com.baina.customview.widget.OmnipotentProgressView;
+
 /**
  * Created by baina on 18-1-25.
  */

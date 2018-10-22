@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.baina.customview.OmnipotentProgressView
+    <com.baina.customview.widget.OmnipotentProgressView
         android:id="@+id/left_progress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,7 +16,7 @@
         app:orientation="left"
         app:progress_drawable="@mipmap/btn_photo_select_max" />
 
-    <com.baina.customview.OmnipotentProgressView
+    <com.baina.customview.widget.OmnipotentProgressView
         android:id="@+id/right_progress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
         app:orientation="top"
         app:progress_drawable="@mipmap/btn_photo_select_max" />
 
-    <com.baina.customview.OmnipotentProgressView
+    <com.baina.customview.widget.OmnipotentProgressView
         android:id="@+id/bottom_progress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
         app:orientation="right"
         app:progress_drawable="@mipmap/btn_photo_select_max" />
 
-    <com.baina.customview.OmnipotentProgressView
+    <com.baina.customview.widget.OmnipotentProgressView
         android:id="@+id/top_progress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

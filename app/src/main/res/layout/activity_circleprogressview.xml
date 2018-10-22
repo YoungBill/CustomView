@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
 
-    <com.baina.customview.CircleProgressView
+    <com.baina.customview.widget.CircleProgressView
         android:id="@+id/circleProgressView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

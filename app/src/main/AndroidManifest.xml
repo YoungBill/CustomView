@@ -20,7 +20,7 @@
         <activity android:name=".CircleProgressViewActivity" />
         <activity android:name=".CoordinateActivity" />
         <activity android:name=".InflaterActivity" />
-        <activity android:name=".PieChartActivity" />
+        <activity android:name=".SurfaceViewActivity" />
     </application>
 
 </manifest>

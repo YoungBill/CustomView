@@ -27,8 +27,8 @@ public class MainActivity extends Activity {
             case R.id.testInflaterBt:
                 startActivity(new Intent(MainActivity.this, InflaterActivity.class));
                 break;
-            case R.id.pieChartBt:
-                startActivity(new Intent(MainActivity.this, PieChartActivity.class));
+            case R.id.surfaceViewBt:
+                startActivity(new Intent(MainActivity.this, SurfaceViewActivity.class));
                 break;
         }
     }
